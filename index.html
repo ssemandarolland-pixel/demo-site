@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>WanderWorld Travels</title>
+
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F0E6;
+    color: #333333;
+    line-height: 1.6;
+}
+
+        h1 {
+            color: darkgreen;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+ nav {
+    background-color: darkgreen;
+    text-align: center;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+h2 {
+    text-align: center;
+    color: darkgreen;
+}
+ nav {
+    background-color: darkgreen;
+    text-align: center;
+    padding: 15px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 8px;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 5px;
+}nav a:hover {
+    color: gold;
+}
+.hero {
+      text-align: center;
+    padding: 120px 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),  url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSoGV3NWB1FLIM2vewv0NSv0ltWGJA6u5W_mg0YuUX_w&s=10");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: white;
+}
+
+.hero .explore-button {
+    display: inline-block;
+    background-color: #FCDC04;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .explore-button:hover {
+    background-color: #D90000;
+    color: white;
+}
+
+.welcome {
+    background-color: #F5F0E6;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.welcome h2 {
+    color: darkgreen;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.welcome p {
+    color: #444444;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 15px auto;
+}
+.destinations {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.destinations h2 {
+    color: darkgreen;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    color: #555555;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.destination-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.destination-card {
+    background-color: #F5F0E6;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card h3 {
+    color: darkgreen;
+    font-size: 22px;
+}
+
+.destination-card p {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.experiences {
+    background-color: #F5F0E6;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.experiences h2 {
+    color: darkgreen;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.experience-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 240px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+}
+
+.experience-card h3 {
+    color: darkgreen;
+    font-size: 21px;
+}
+
+.experience-card p {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.why-choose-us {
+    background-color: white;
+    text-align: center;
+    padding: 60px 25px;
+}
+
+.why-choose-us h2 {
+    color: darkgreen;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.reasons-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.reason {
+    background-color: #F5F0E6;
+    padding: 25px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-8px);
+}
+
+.reason h3 {
+    color: darkgreen;
+    font-size: 21px;
+}
+
+.reason p {
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.7;
+}
+.footer {
+    background-color: darkgreen;
+    color: white;
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.footer h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: white;
+    font-size: 16px;
+}
+
+.footer-links {
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 16px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.footer-links a:hover {
+    color: #FCDC04;
+}
+
+.footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    margin-top: 25px;
+    font-size: 14px;
+}
+@media (max-width: 600px) {
+
+    .destination-container,
+    .experience-container,
+    .reasons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination-card,
+    .experience-card,
+    .reason {
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    nav a {
+        margin: 4px;
+        padding: 6px 4px;
+        font-size: 14px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+    <h1>WanderWorld Travels</h1>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Uganda</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="adventures.html">Adventures</a>
+        <a href="culture.html">Culture</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="guide.html">Travel Guide</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section class="hero">
+
+    <h2>Uganda — The Pearl of Africa</h2>
+
+    <p>Discover breathtaking landscapes, extraordinary wildlife, and unforgettable adventures.</p>
+
+    <a href="#destinations" class="explore-button">Explore Uganda</a>
+  
+
+</section>
+
+
+<section class="welcome">
+        <h2>Welcome to the Pearl of Africa</h2>
+
+        <p>
+            From breathtaking national parks and beautiful lakes
+            to rich cultures and unforgettable adventures, Uganda
+            offers something special for every traveller.
+        </p>
+
+        <p>
+            At WanderWorld Travels, we help you discover Uganda's
+            beauty, explore its hidden treasures, and create memories
+            that last a lifetime.
+        </p>
+<section class="destinations" id="destnations">
+        <h2>Explore Uganda</h2>
+
+        <p class="section-intro">
+            Discover the natural wonders that make Uganda unforgettable.
+        </p>
+
+        <div class="destination-container">
+
+            <div class="destination-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDWPUQw75PtHNFdefYgZhqm6ONnSY4U7FYAL5Y1ZwMA&s=10" alt="Wildlife in Queen Elizabeth National Park">
+                <h3>Queen Elizabeth National Park</h3>
+                <p>Experience exciting wildlife safaris and discover the famous tree-climbing lions.</p>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSq96ozIYZwLjpNAkVokjgslskz6qGv9q3_rM8XRza053hro51ptUm646J&s=10" alt="Murchison Falls in Uganda">
+                <h3>Murchison Falls</h3>
+                <p>Witness the mighty Nile squeeze through a narrow gorge before plunging into the river below.</p>
+            </div>
+
+            <div class="destination-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWA0bOmx4ba9Vn6Fdo5StUn8t5F4BNiPO-bm15v3VwkkqntHtNUaCbEqlT&s=10" alt="Mountain gorilla in Bwindi Impenetrable National Park">
+                <h3>Bwindi Impenetrable National Park</h3>
+                <p>Explore lush forests and encounter endangered mountain gorillas with a guided trek.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="experiences">
+    <h2>Experience the Magic of Uganda</h2>
+
+    <p class="section-intro">
+        Whether you love wildlife, water, or the great outdoors,
+        Uganda has an adventure waiting for you.
+    </p>
+
+    <div class="experience-container">
+
+        <div class="experience-card">
+            <h3>Wildlife Safaris</h3>
+            <p>Discover elephants, lions, giraffes, and other incredible wildlife in their natural habitats.</p>
+        </div>
+
+        <div class="experience-card">
+            <h3>Gorilla Trekking</h3>
+            <p>Journey through Uganda's forests for a remarkable encounter with mountain gorillas.</p>
+        </div>
+
+        <div class="experience-card">
+            <h3>Boat Cruises</h3>
+            <p>Enjoy beautiful waterways, peaceful boat rides, and unforgettable views of nature.</p>
+        </div>
+
+        <div class="experience-card">
+            <h3>Nature Adventures</h3>
+            <p>Explore lush landscapes, scenic trails, mountains, and Uganda's breathtaking countryside.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="why-choose-us">
+    <h2>Why Travel With WanderWorld?</h2>
+
+    <p class="section-intro">
+        Your Ugandan adventure deserves thoughtful planning
+        and unforgettable experiences.
+    </p>
+
+    <div class="reasons-container">
+
+        <div class="reason">
+            <h3>Authentic Experiences</h3>
+            <p>Discover Uganda's natural beauty, wildlife, and culture through meaningful travel experiences.</p>
+        </div>
+
+        <div class="reason">
+            <h3>Personalised Adventures</h3>
+            <p>Explore travel options that suit your interests, preferences, and sense of adventure.</p>
+        </div>
+
+        <div class="reason">
+            <h3>Discover More</h3>
+            <p>From famous national parks to beautiful hidden gems, find more reasons to fall in love with Uganda.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+</section>
+<footer class="footer">
+
+    <h2>WanderWorld Travels</h2>
+
+    <p>Discover Uganda. Experience the extraordinary.</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="packages.html">Tour Packages</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <p class="copyright">
+        &copy; 2026 WanderWorld Travels. All rights reserved.
+    </p>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
